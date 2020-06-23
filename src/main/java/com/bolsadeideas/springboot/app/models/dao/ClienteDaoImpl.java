@@ -1,4 +1,4 @@
-package com.bolsadeideas.springboot.app.models.dao;
+/*package com.bolsadeideas.springboot.app.models.dao;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class ClienteDaoImpl implements IClienteDao {
 	private EntityManager em;
 
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
+	
 	@Override
 	public List<Cliente> findAll() {
 		// TODO Auto-generated method stub
@@ -25,7 +25,7 @@ public class ClienteDaoImpl implements IClienteDao {
 	}
 
 	@Override
-	@Transactional
+
 	public void save(Cliente cliente) {
 		if (cliente.getId() != null && cliente.getId() > 0) {
 			em.merge(cliente);
@@ -40,10 +40,15 @@ public class ClienteDaoImpl implements IClienteDao {
 	}
 
 	@Override
-	@Transactional
 	public void delete(Long id) {
 		em.remove(findOne(id));
+
+		//de esta forma tambien se hace el borado
+	//	Cliente cliente=findOne(id);
+	//	em.remove(cliente);
+
 	}
 
 
-}
+}*/
+//esta clase es la implementacion del dao con sus metodos  de la clase comentada
